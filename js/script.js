@@ -57,5 +57,6 @@ function calculateSum() {
   costHanger1.textContent = hangerField ? hangerField.value : "";
   costHanger2.textContent = hangerField ? (hangerField.value * 1.1).toFixed(2) : "";
   together.textContent = (valueCostBaguette1 * 1.1 + valueArea * glassField.value * 1.1 + valueArea * mdfField.value * 1.1 + workField.value * 1.1 + hangerField.value * 1.1).toFixed(2);
+console.log("sfdgfh");
 }
 
