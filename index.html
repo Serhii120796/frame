@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>frame</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <table class="sizes">
+      <tr>
+        <td>Довжина, см</td>
+        <td>
+          <input type="number" id="length" min="0" step="0.1" />
+        </td>
+        <td>Периметр, м</td>
+        <td><span id="perimeter"></span></td>
+      </tr>
+      <tr>
+        <td>Ширина, см</td>
+        <td><input type="number" id="width" min="0" step="0.1" /></td>
+        <td>Площа, кв. м</td>
+        <td><span id="area"></span></td>
+      </tr>
+    </table>
+    <table>
+      <thead>
+        <tr>
+          <th>Складові рамки</th>
+          <th></th>
+          <th>Ціна, грн./од</th>
+          <th>Вартість 1, грн.</th>
+          <th>Вартість 2, грн.</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Багет, м. п + на кути</td>
+          <td><input type="number" id="priceBaguette" min="0" step="1" /></td>
+          <td></td>
+          <td><span id="costBaguette1"></span></td>
+          <td><span id="costBaguette2"></span></td>
+        </tr>
+        <tr>
+          <td>Скло кв. м</td>
+          <td>
+            <select id="typeGlass">
+              <option value="0">без скла</option>
+              <option value="400">укр. антибілк</option>
+              <option value="800">звичайне</option>
+              <option value="1000" selected>антиблік</option>
+          </td>
+          <td>
+            <span id="priceGlass"></span>
+          </td>
+          <td>
+            <span id="costGlass1"></span>
+          </td>
+          <td>
+            <span id="costGlass2"></span>
+          </td>
+        </tr>
+        <tr>
+          <td>МДФ кв. м</td>
+          <td>
+            <select id="typeMDF">
+              <option value="0">без МДФ</option>
+              <option value="300">одинарне</option>
+              <option value="400" selected>подвійне</option>
+          </td>
+          <td>
+            <span id="priceMDF"></span>
+          </td>
+          <td>
+            <span id="costMDF1"></span>
+          </td>
+          <td>
+            <span id="costMDF2"></span>
+          </td>
+        </tr>
+        <tr>
+          <td>Робота, од</td>
+          <td>
+            <select id="typeWork">
+              <option value="0">без роботи</option>
+              <option value="40">А6</option>
+              <option value="40">А5</option>
+              <option value="40">А4</option>
+              <option value="50" selected>А3</option>
+              <option value="60">А2</option>
+          </td>
+          <td>
+            <span id="priceWork"></span>
+          </td>
+          <td>
+            <span id="costWork1"></span>
+          </td>
+          <td>
+            <span id="costWork2"></span>
+          </td>
+        </tr>
+        <tr>
+          <td>Вішачок, од</td>
+          <td>
+            <select id="typeHanger">
+              <option value="0">ні</option>
+              <option value="5" selected>так</option>
+          </td>
+          <td>
+            <span id="priceHanger"></span>
+          </td>
+          <td>
+            <span id="costHanger1"></span>
+          </td>
+          <td>
+            <span id="costHanger2"></span>
+          </td>
+        </tr>
+        <tr>
+          <td>Разом</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>
+            <span id="costTogether"></span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

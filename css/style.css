@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 10px;
+}
+
+table {
+    border-collapse: collapse;
+}
+table th,
+table td {
+    padding: 5px;
+    border: 1px solid #2a2a2a;
+}
+
+.sizes {
+    margin-bottom: 16px;
+}
+input {
+    border: none;
+    text-align: center;
+    width: 100px;
+}
+
+span {
+    display: inline-block;
+    min-width: 100px;
+    text-align: center;
+}
