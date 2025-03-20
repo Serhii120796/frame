@@ -3,6 +3,7 @@ const widthField = document.getElementById("width");
 const perimeterField = document.getElementById("perimeter");
 const areaField = document.getElementById("area");
 const priceBaguetteField = document.getElementById("priceBaguette");
+const priceСornersField = document.getElementById("priceСorner");
 const costBaguette1 = document.getElementById("costBaguette1");
 const costBaguette2 = document.getElementById("costBaguette2");
 const glassField = document.getElementById("typeGlass");
@@ -27,20 +28,22 @@ const together = document.getElementById("costTogether");
 lengthField.addEventListener("input", calculateSum);
 widthField.addEventListener("input", calculateSum);
 priceBaguetteField.addEventListener("input", calculateSum);
+priceСornersField.addEventListener("input", calculateSum);
 glassField.addEventListener("input", calculateSum);
 mdfField.addEventListener("input", calculateSum);
 workField.addEventListener("input", calculateSum);
 hangerField.addEventListener("input", calculateSum);
 
 function calculateSum() {
-  const length = lengthField.valueAsNumber;
-  const width = widthField.valueAsNumber;
+  const length = lengthField.valueAsNumber || 0;
+  const width = widthField.valueAsNumber || 0;
   const priceBaguette = priceBaguetteField.valueAsNumber;
+  const priceСorner = priceСornersField.valueAsNumber || 0;
   const valuePerimeter = (length + width) * 2 / 100;
   const valueArea = length / 100 * width / 100;
-  const valueCostBaguette1 = valuePerimeter ? valuePerimeter * priceBaguette : "";
+  const valueCostBaguette1 = valuePerimeter ? valuePerimeter * priceBaguette + priceСorner : "";
   
-  perimeterField.textContent = valuePerimeter ? valuePerimeter : "";
+  perimeterField.textContent = valuePerimeter ? valuePerimeter.toFixed(2) : "";
   areaField.textContent = valueArea ? valueArea.toFixed(4) : "";
   costBaguette1.textContent = valueCostBaguette1 ? valueCostBaguette1.toFixed(2) : "";
   costBaguette2.textContent = valueCostBaguette1 ? (valueCostBaguette1 * 1.1).toFixed(2) : "";
@@ -57,6 +60,6 @@ function calculateSum() {
   costHanger1.textContent = hangerField ? hangerField.value : "";
   costHanger2.textContent = hangerField ? (hangerField.value * 1.1).toFixed(2) : "";
   together.textContent = (valueCostBaguette1 * 1.1 + valueArea * glassField.value * 1.1 + valueArea * mdfField.value * 1.1 + workField.value * 1.1 + hangerField.value * 1.1).toFixed(2);
-console.log("sfdgfh");
+console.log(length);
 }
 
