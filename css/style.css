@@ -22,10 +22,15 @@ input {
     border: none;
     text-align: center;
     width: 100px;
+    background-color: inherit;
 }
 
 span {
     display: inline-block;
     min-width: 100px;
     text-align: center;
+}
+
+.data {
+    background-color: #ffda00;
 }
