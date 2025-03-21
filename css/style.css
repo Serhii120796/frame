@@ -13,16 +13,18 @@ table th,
 table td {
     padding: 5px;
     border: 1px solid #2a2a2a;
+    text-align: center;
 }
 
 .sizes {
     margin-bottom: 16px;
 }
-input {
+input, select {
     border: none;
     text-align: center;
     width: 100px;
     background-color: inherit;
+    width: 100%;
 }
 
 span {
@@ -31,6 +33,6 @@ span {
     text-align: center;
 }
 
-.data {
+.data, select {
     background-color: #ffda00;
 }
