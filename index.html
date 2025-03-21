@@ -10,21 +10,26 @@
   </head>
   <body>
     <table class="sizes">
-      <tr>
-        <td>Довжина, см</td>
-        <td class="data">
-          <input type="number" id="length" min="0" step="0.1" />
-        </td>
-        <td>Периметр, м</td>
-        <td><span id="perimeter"></span></td>
-      </tr>
-      <tr>
-        <td>Ширина, см</td>
-        <td class="data">
-          <input type="number" id="width" min="0" step="0.1" /></td>
-        <td>Площа, кв. м</td>
-        <td><span id="area"></span></td>
-      </tr>
+        <tr>
+          <td class="title">Довжина, см</td>
+          <td class="data">
+            <input type="number" id="length" min="0" step="0.1" />
+          </td>
+          <td class="title">Периметр, м</td>
+          <td>
+            <span id="perimeter"></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="title">Ширина, см</td>
+          <td class="data">
+            <input type="number" id="width" min="0" step="0.1" />
+          </td>
+          <td class="title">Площа, кв. м</td>
+          <td>
+            <span id="area"></span>
+          </td>
+        </tr>
     </table>
     <table>
       <thead>
@@ -38,7 +43,7 @@
       </thead>
       <tbody>
         <tr>
-          <td>Багет, м. п + на кути</td>
+          <td class="title">Багет, м. п + на кути</td>
           <td class="data"><input type="number" id="priceBaguette" min="0" step="1" placeholder="за 1 м. п."/></td>
           <td class="data">
             <input type="number" id="priceСorner" min="0" step="1" placeholder="на кути"/>
@@ -47,7 +52,7 @@
           <td><span id="costBaguette2"></span></td>
         </tr>
         <tr>
-          <td>Скло кв. м</td>
+          <td class="title">Скло кв. м</td>
           <td class="data">
             <select id="typeGlass">
               <option value="0">без скла</option>
@@ -66,7 +71,7 @@
           </td>
         </tr>
         <tr>
-          <td>МДФ кв. м</td>
+          <td class="title">МДФ кв. м</td>
           <td class="data">
             <select id="typeMDF">
               <option value="0">без МДФ</option>
@@ -84,7 +89,7 @@
           </td>
         </tr>
         <tr>
-          <td>Робота, од</td>
+          <td class="title">Робота, од</td>
           <td class="data">
             <select id="typeWork">
               <option value="0">без роботи</option>
@@ -105,7 +110,7 @@
           </td>
         </tr>
         <tr>
-          <td>Вішачок, од</td>
+          <td class="title">Вішачок, од</td>
           <td class="data">
             <select id="typeHanger">
               <option value="0">ні</option>
