@@ -12,15 +12,16 @@
     <table class="sizes">
       <tr>
         <td>Довжина, см</td>
-        <td>
-          <input class="data" type="number" id="length" min="0" step="0.1" />
+        <td class="data">
+          <input type="number" id="length" min="0" step="0.1" />
         </td>
         <td>Периметр, м</td>
         <td><span id="perimeter"></span></td>
       </tr>
       <tr>
         <td>Ширина, см</td>
-        <td><input class="data" type="number" id="width" min="0" step="0.1" /></td>
+        <td class="data">
+          <input type="number" id="width" min="0" step="0.1" /></td>
         <td>Площа, кв. м</td>
         <td><span id="area"></span></td>
       </tr>
@@ -39,15 +40,15 @@
         <tr>
           <td>Багет, м. п + на кути</td>
           <td class="data"><input type="number" id="priceBaguette" min="0" step="1" placeholder="за 1 м. п."/></td>
-          <td>
-            <input class="data" type="number" id="priceСorner" min="0" step="1" placeholder="на кути"/>
+          <td class="data">
+            <input type="number" id="priceСorner" min="0" step="1" placeholder="на кути"/>
           </td>
           <td><span id="costBaguette1"></span></td>
           <td><span id="costBaguette2"></span></td>
         </tr>
         <tr>
           <td>Скло кв. м</td>
-          <td>
+          <td class="data">
             <select id="typeGlass">
               <option value="0">без скла</option>
               <option value="400">укр. антибілк</option>
@@ -66,7 +67,7 @@
         </tr>
         <tr>
           <td>МДФ кв. м</td>
-          <td>
+          <td class="data">
             <select id="typeMDF">
               <option value="0">без МДФ</option>
               <option value="300">одинарне</option>
@@ -84,7 +85,7 @@
         </tr>
         <tr>
           <td>Робота, од</td>
-          <td>
+          <td class="data">
             <select id="typeWork">
               <option value="0">без роботи</option>
               <option value="40">А6</option>
@@ -105,7 +106,7 @@
         </tr>
         <tr>
           <td>Вішачок, од</td>
-          <td>
+          <td class="data">
             <select id="typeHanger">
               <option value="0">ні</option>
               <option value="5" selected>так</option>
