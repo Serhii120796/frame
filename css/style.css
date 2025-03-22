@@ -29,11 +29,24 @@ table td {
 
 input,
 select {
-  border: none;
   text-align: center;
   background-color: inherit;
   width: 100%;
   min-width: 100px;
+}
+
+select, .warning {
+  border: 2px solid #ffda00;
+}
+
+.required:valid {
+  border: 2px solid green;
+  /* background-color: green; */
+}
+
+.required:invalid {
+  border: 2px solid red;
+  background-color: rgba(255, 0, 0, 0.1);
 }
 
 span {
@@ -42,14 +55,14 @@ span {
   text-align: center;
 }
 
-.data {
+/* .data {
   background-color: #ffda00;
-}
+} */
 
 .title {
   text-align: left;
 }
 
-input::-webkit-textfield-decoration-container {
+/* input::-webkit-textfield-decoration-container {
     background-color: #ffda00;
-}
+} */
