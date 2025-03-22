@@ -13,7 +13,7 @@
         <tr>
           <td class="title">Довжина</td>
           <td class="data">
-            <input type="number" id="length" min="0" step="0.1" placeholder="см"/>
+            <input class="required" type="number" id="length" min="0" step="0.1" placeholder="см" required/>
           </td>
           <td class="title">Периметр</td>
           <td>
@@ -23,7 +23,7 @@
         <tr>
           <td class="title">Ширина</td>
           <td class="data">
-            <input type="number" id="width" min="0" step="0.1" placeholder="см"/>
+            <input class="required" type="number" id="width" min="0" step="0.1" placeholder="см" required/>
           </td>
           <td class="title">Площа</td>
           <td>
@@ -36,17 +36,19 @@
         <tr>
           <th>Складові рамки</th>
           <th></th>
-          <th>Ціна, грн./од</th>
-          <th>Вартість 1, грн.</th>
-          <th>Вартість 2, грн.</th>
+          <th>Ціна</th>
+          <th>Розрахунок</th>
+          <th>Вартість</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td class="title">Багет</td>
-          <td class="data"><input type="number" id="priceBaguette" min="0" step="1" placeholder="за 1 м. п."/></td>
           <td class="data">
-            <input type="number" id="priceСorner" min="0" step="1" placeholder="на кути"/>
+            <input class="required" type="number" id="priceBaguette" min="0" step="1" placeholder="за 1 м. п." required/>
+          </td>
+          <td class="data">
+            <input class="warning" type="number" id="priceСorner" min="0" step="1" placeholder="на кути" required/>
           </td>
           <td><span id="costBaguette1"></span></td>
           <td><span id="costBaguette2"></span></td>
@@ -55,7 +57,7 @@
           <td class="title">Скло</td>
           <td class="data">
             <select id="typeGlass">
-              <option value="0">без скла</option>
+              <option value="">без скла</option>
               <option value="400">укр. антибілк</option>
               <option value="800">звичайне</option>
               <option value="1000" selected>антиблік</option>
@@ -74,7 +76,7 @@
           <td class="title">МДФ</td>
           <td class="data">
             <select id="typeMDF">
-              <option value="0">без МДФ</option>
+              <option value="">без МДФ</option>
               <option value="300" selected>одинарне</option>
               <option value="400">подвійне</option>
           </td>
@@ -92,7 +94,7 @@
           <td class="title">Робота</td>
           <td class="data">
             <select id="typeWork">
-              <option value="0">без роботи</option>
+              <option value="">без роботи</option>
               <option value="40">А6</option>
               <option value="40">А5</option>
               <option value="40">А4</option>
@@ -113,7 +115,7 @@
           <td class="title">Вішачок</td>
           <td class="data">
             <select id="typeHanger">
-              <option value="0">ні</option>
+              <option value="">ні</option>
               <option value="5" selected>так</option>
           </td>
           <td>
