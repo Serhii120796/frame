@@ -27,6 +27,7 @@ select {
   text-align: center;
   background-color: inherit;
   width: 100%;
+  min-width: 100px;
 }
 
 span {
