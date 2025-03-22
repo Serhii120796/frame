@@ -45,8 +45,8 @@ function calculateSum() {
   
   perimeterField.textContent = valuePerimeter ? valuePerimeter.toFixed(2) : "";
   areaField.textContent = valueArea ? valueArea.toFixed(4) : "";
-  costBaguette1.textContent = valueCostBaguette1 ? valueCostBaguette1.toFixed(2) : "";
-  costBaguette2.textContent = valueCostBaguette1 ? (valueCostBaguette1 * 1.1).toFixed(2) : "";
+  costBaguette1.textContent = valueCostBaguette1 ? valueCostBaguette1.toFixed(2) : 0;
+  costBaguette2.textContent = valueCostBaguette1 ? (valueCostBaguette1 * 1.1).toFixed(2) : 0;
   priceGlassField.textContent = glassField.value;
   costGlass1.textContent = valueArea ? (valueArea * glassField.value).toFixed(2) : "";
   costGlass2.textContent = valueArea ? (valueArea * glassField.value * 1.1).toFixed(2) : "";
@@ -54,10 +54,10 @@ function calculateSum() {
   costMDF1.textContent = valueArea ? (valueArea * mdfField.value).toFixed(2) : "";
   costMDF2.textContent = valueArea ? (valueArea * mdfField.value * 1.1).toFixed(2) : "";
   priceWorkField.textContent = workField.value;
-  costWork1.textContent = workField.value ? workField.value : "";
+  costWork1.textContent = workField.value ? workField.value.toFixed(2) : "";
   costWork2.textContent = workField ? (workField.value * 1.1).toFixed(2) : "";
   priceHangerField.textContent = hangerField.value;
-  costHanger1.textContent = hangerField ? hangerField.value : "";
+  costHanger1.textContent = hangerField ? hangerField.value.toFixed(2) : "";
   costHanger2.textContent = hangerField ? (hangerField.value * 1.1).toFixed(2) : "";
   together.textContent = (valueCostBaguette1 * 1.1 + valueArea * glassField.value * 1.1 + valueArea * mdfField.value * 1.1 + workField.value * 1.1 + hangerField.value * 1.1).toFixed(2);
 console.log(length);
