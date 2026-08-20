@@ -24,7 +24,6 @@ const costHanger1 = document.getElementById("costHanger1");
 const costHanger2 = document.getElementById("costHanger2");
 const together = document.getElementById("costTogether");
 
-
 lengthField.addEventListener("input", calculateSum);
 widthField.addEventListener("input", calculateSum);
 priceBaguetteField.addEventListener("input", calculateSum);
@@ -41,13 +40,13 @@ function calculateSum() {
   const width = widthField.valueAsNumber; // Початкове значення NaN
   const priceBaguette = priceBaguetteField.valueAsNumber; // Початкове значення NaN
   const priceСorner = priceСornersField.valueAsNumber; // Початкове значення NaN
-  
-  const perimeter = (length + width) * 2 / 100; // Початкове значення NaN
+
+  const perimeter = ((length + width) * 2) / 100; // Початкове значення NaN
   perimeterField.textContent = perimeter ? perimeter.toFixed(2) : "";
-  
-  const area = length / 100 * width / 100; // Початкове значення NaN
+
+  const area = ((length / 100) * width) / 100; // Початкове значення NaN
   areaField.textContent = area ? area.toFixed(4) : "";
-  
+
   const valueCostBaguette1 = perimeter && priceBaguette ? perimeter * priceBaguette + (priceСorner || 0) : 0;
   costBaguette1.textContent = valueCostBaguette1 ? valueCostBaguette1.toFixed(2) : "";
   const valueCostBaguette2 = valueCostBaguette1 ? valueCostBaguette1 * 1.1 : 0;
@@ -72,6 +71,11 @@ function calculateSum() {
   costHanger1.textContent = valueCostHanger1 ? valueCostHanger1.toFixed(2) : "";
   const valueCostHanger2 = valueCostHanger1 ? valueCostHanger1 * 1.1 : 0;
   costHanger2.textContent = valueCostHanger2 ? valueCostHanger2.toFixed(2) : "";
-  together.textContent = ((valueCostBaguette2 || 0) + (valueCostGlass2 || 0) + (valueCostMDF2 || 0) + (valueCostWork2 || 0) + (valueCostHanger2 || 0)).toFixed(2);
+  together.textContent = (
+    (valueCostBaguette2 || 0) +
+    (valueCostGlass2 || 0) +
+    (valueCostMDF2 || 0) +
+    (valueCostWork2 || 0) +
+    (valueCostHanger2 || 0)
+  ).toFixed(2);
 }
-
